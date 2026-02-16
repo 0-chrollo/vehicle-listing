@@ -506,7 +506,7 @@ width: fit-content;
 }
 
 .card-button:hover {
-    background: linear-gradient(90deg, #a01829 0%, #c41e3a 100%);
+    background: linear-gradient(115deg, #295674 0%, #0e5584 100%); 
 }
 
 .card-button svg {
