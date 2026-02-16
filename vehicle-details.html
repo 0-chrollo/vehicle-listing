@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="listing.css">
+    <link rel="stylesheet" href="vehicle.css">
+    <title>Empire Trucks & Auto Dealers | Vehicle Details </title>
+
+</head>
+<body>
+        <!-- ===== NAVIGATION ===== -->
+        <!-- ===== NAVIGATION ===== -->
+        <!-- ===== NAVIGATION ===== -->
+ 
+
+        <div class="top-bar">
+            <div class="top-bar-container">
+            
+                <a href="https://wa.me/27729943541" class="top-bar-link">
+                    <span><i class="fa-brands fa-whatsapp"></i></span> 072 994 3541
+                </a>
+                <a href="mailto:info@empireautodealers.co.za" class="top-bar-link">
+                    <span><i class="fa fa-envelope"></i></span> info@empireautodealers.co.za
+                </a>
+            </div>
+        </div>
+          
+        
+
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <!-- <div class="logo-icon"><img src="ima-logo.png"></div> -->
+                    <div class="logo-main">Empire Trucks</div>
+                </div>
+    
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="truck-listing.html">Our Trucks</a></li>
+                    <li><a href="#quote">Contact</a></li>
+                </ul>
+    
+                <button class="burger" id="burgerBtn">
+                    <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="closeIcon" style="display: none;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+    
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="index.html">Home</a>
+                <a href="truck-listing.html">Our Trucks</a>
+                <a href="#quote">Contact</a>
+            </div>
+        </nav>
+
+        <!-- ===== NAVIGATION ===== -->
+        <!-- ===== NAVIGATION ===== -->
+        <!-- ===== NAVIGATION ===== -->
+
+
+        <section class="hero-section">
+            <div class="hero-content">
+                <br>
+                <br>
+                <h1 class="hero-title">Interested in This Truck?</h1>
+                <p class="hero-subtitle">You're one step away from owning it. Review the details below and get in touch with us to enquire or make it yours today.</p>
+                <a href="truck-listing.html" class="hero-button">View More Trucks</a>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+                <style>
+                   
+                </style>
+          
+                <!-- Two Column Layout -->
+                <div class="layout-wrapper">
+                    <!-- Left Column: Truck Gallery -->
+                    <section class="trucks-container">
+                        <div class="main-image-container">
+                            <div class="main-image-wrapper">
+                                <img src="images/hino1.webp" 
+                                     alt="Truck Image" 
+                                     class="main-image" 
+                                     id="mainImage">
+                                
+                                <button class="nav-button prev-button" id="prevBtn" aria-label="Previous image">
+                                    &#8249;
+                                </button>
+                                
+                                <button class="nav-button next-button" id="nextBtn" aria-label="Next image">
+                                    &#8250;
+                                </button>
+                                
+                                <div class="image-counter" id="imageCounter">1 / 9</div>
+                            </div>
+                        </div>
+            
+                        <div class="thumbnail-grid" id="thumbnailGrid">
+                            <!-- Replace these image URLs with your own truck images -->
+                            <div class="thumbnail-item active" data-index="0">
+                                <img src="images/hino2.webp" 
+                                     alt="Truck 1" 
+                                     class="thumbnail-image">
+                            </div>
+                            <div class="thumbnail-item" data-index="1">
+                                <img src="images/hino3.webp" 
+                                     alt="Truck 2" 
+                                     class="thumbnail-image">
+                            </div>
+            
+                 
+                           
+                    
+                            <div class="thumbnail-item" data-index="7">
+                                <img src="images/hino4.webp" 
+                                     alt="Truck 8" 
+                                     class="thumbnail-image">
+                            </div>
+                            <div class="thumbnail-item active" data-index="0">
+                                <img src="images/hino5.webp" 
+                                     alt="Truck 1" 
+                                     class="thumbnail-image">
+                            </div>
+                        </div>
+                    </section>
+            
+                    <!-- Right Column: Vehicle Specs -->
+                    <aside class="specs-container">
+                        <div class="specs-card">
+                            <h2 class="specs-title">Vehicle Specifications</h2>
+                            
+                            <div class="specs-section">
+                                <h3 class="specs-section-title">General Information</h3>
+                                <table class="specs-table">
+                                    <tr>
+                                        <td class="spec-label">Make</td>
+                                        <td class="spec-value">Hino</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="spec-label">Model</td>
+                                        <td class="spec-value">500 Water Tanker </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="spec-label">Year</td>
+                                        <td class="spec-value">2016</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="spec-label">seats</td>
+                                        <td class="spec-value">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="spec-label">Mileage</td>
+                                        <td class="spec-value">386,555 KM</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="spec-label">Condition</td>
+                                        <td class="spec-value">Good</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="spec-label">Transmission</td>
+                                        <td class="spec-value">Manual</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="spec-label">Fuel Type</td>
+                                        <td class="spec-value">Diesel </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="spec-label">Service History</td>
+                                        <td class="spec-value">Available</td>
+                                    </tr>
+                                </table>
+                            </div>
+            
+                          
+            
+                       
+            
+                 
+                        </div>
+                    </aside>
+                </div>
+            
+                <script>
+                    let currentIndex = 0;
+            
+                    // Elements
+                    const mainImage = document.getElementById('mainImage');
+                    const prevBtn = document.getElementById('prevBtn');
+                    const nextBtn = document.getElementById('nextBtn');
+                    const imageCounter = document.getElementById('imageCounter');
+                    const thumbnails = document.querySelectorAll('.thumbnail-item');
+            
+                    // Get all images from HTML
+                    const thumbnailImages = document.querySelectorAll('.thumbnail-image');
+                    const totalImages = thumbnailImages.length;
+            
+                    // Initialize counter
+                    imageCounter.textContent = `1 / ${totalImages}`;
+            
+                    // Add click handlers to thumbnails
+                    thumbnails.forEach((thumbnail, index) => {
+                        thumbnail.addEventListener('click', () => showImage(index));
+                    });
+            
+                    // Show image at specific index
+                    function showImage(index) {
+                        currentIndex = index;
+                        const selectedThumbnail = thumbnailImages[currentIndex];
+                        mainImage.src = selectedThumbnail.src;
+                        imageCounter.textContent = `${currentIndex + 1} / ${totalImages}`;
+                        
+                        // Update active thumbnail
+                        thumbnails.forEach((thumb, i) => {
+                            thumb.classList.toggle('active', i === currentIndex);
+                        });
+                    }
+            
+                    // Navigate to previous image
+                    function previousImage() {
+                        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+                        showImage(currentIndex);
+                    }
+            
+                    // Navigate to next image
+                    function nextImage() {
+                        currentIndex = (currentIndex + 1) % totalImages;
+                        showImage(currentIndex);
+                    }
+            
+                    // Event listeners
+                    prevBtn.addEventListener('click', previousImage);
+                    nextBtn.addEventListener('click', nextImage);
+            
+                    // Keyboard navigation
+                    document.addEventListener('keydown', (e) => {
+                        if (e.key === 'ArrowLeft') {
+                            previousImage();
+                        } else if (e.key === 'ArrowRight') {
+                            nextImage();
+                        }
+                    });
+            
+                    // Touch swipe support for mobile
+                    let touchStartX = 0;
+                    let touchEndX = 0;
+            
+                    mainImage.addEventListener('touchstart', (e) => {
+                        touchStartX = e.changedTouches[0].screenX;
+                    });
+            
+                    mainImage.addEventListener('touchend', (e) => {
+                        touchEndX = e.changedTouches[0].screenX;
+                        handleSwipe();
+                    });
+            
+                    function handleSwipe() {
+                        if (touchEndX < touchStartX - 50) {
+                            nextImage();
+                        }
+                        if (touchEndX > touchStartX + 50) {
+                            previousImage();
+                        }
+                    }
+                </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align:center; padding:0 1rem;margin-top:4vh;" >
+    <h2 style="font-size: 1.2rem; font-weight: 600;color:rgb(20, 22, 23);">Inquire for this Vehicle</h2> 
+  </div>
+  <main class="tm-form">
+  
+
+  
+  
+  <div class="containerd">
+    <!-- Column 1: Form -->
+  <div class="column-1">
+  <form action="https://formsubmit.co/email" method="POST">
+  <input type="hidden" name="_next" value="https:///page?submitted=true">
+  <input type="hidden" name="_subject" value="New Service Inquiry - Phiribathong Consulting">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  
+  <div class="form-group name-group">
+    <input type="text" name="firstName" placeholder="First Name" required>
+    <input type="text" name="surname" placeholder="Surname" required>
+  </div>
+  
+  <div class="form-group">
+    <input type="email" name="email" placeholder="Email Address" required>
+  </div>
+  
+  <div class="form-group">
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+  </div>
+  
+  <div class="form-group">
+    <input type="text" name="businessName" placeholder="Business/Company Name (Optional)">
+  </div>
+  
+
+  
+
+  
+  
+
+  
+
+  
+  <button type="submit" class="btn-submit">
+    <i class="fas fa-paper-plane"></i> Submit 
+  </button>
+  <br>
+  <br>
+  <button class="btn-submit" style="background: rgb(21, 181, 21);">
+    <a href="https://wa.me/27729943541">
+    <i class="fa-brands fa-whatsapp"></i> Whatsapp
+    </a>
+  </button>
+  </form>
+  
+  <!-- Success Popup -->
+  <div id="successPopup" class="popup-overlay">
+  <div class="popup-box">
+    <i class="fas fa-check-circle fa-3x" style="color: rgb(223, 223, 223);"></i>
+    <p>Thank you! We've received your inquiry and our team will contact you shortly to discuss your project.</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+  </div>
+  </div>
+    
+    
+  <!-- Column 2: How to enquire vehicle -->
+  <div class="column-2">
+    <div class="how-to-apply">
+      <h2>How to Enquire About a Truck</h2>
+
+      <div class="step">
+        <div class="step-icon">1</div>
+        <div class="step-text">Browse our truck inventory and find a vehicle you're interested in, then fill out the enquiry form with your name and contact details.</div>
+      </div>
+
+      <div class="step">
+        <div class="step-icon">2</div>
+        <div class="step-text">Our team will review your enquiry and get back to you within 24 hours to discuss the vehicle, pricing, and availability.</div>
+      </div>
+
+      <div class="step">
+        <div class="step-icon">3</div>
+        <div class="step-text">We'll walk you through the truck's details, arrange a viewing if needed, and help you finalise the deal — hassle free.</div>
+      </div>
+
+      <div class="step">
+        <div class="step-icon">4</div>
+        <div class="step-text">Prefer a quicker response? Skip the form and reach us directly on <strong>072 994 3541</strong> via call or WhatsApp — we're ready to assist.</div>
+      </div>
+  
+ 
+  
+    
+  </div>
+  </div>
+  </div>
+  
+  <script>
+    window.onload = function () {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("submitted") === "true") {
+        document.getElementById("successPopup").style.display = "flex";
+      }
+    };
+  
+    function closePopup() {
+      document.getElementById("successPopup").style.display = "none";
+      window.location.href = "contact.html";
+    }
+  </script>
+  </main>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+        <!-- Company Info -->
+        <div class="footer-section">
+            <h3>Empire Trucks & Auto Dealers</h3>
+            <p>
+                Empire Trucks & Auto Dealers is your trusted source for quality used Trucks 
+                and commercial vehicles. We offer a wide selection of road-ready trucks to suit 
+                every budget backed by honest service and expert advice.
+            </p>
+            
+            <h3 style="margin-top: 1.5rem;">Follow Us</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com/EmpireAutoDealers" target="_blank" class="social-icon" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    
+        <!-- Quick Links -->
+        <div class="footer-section-lu">
+            <h5>Quick Links</h5>
+            <br>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="truck-listing.html">All Trucks</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    
+        <!-- Contact Info -->
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <div class="contact-info">
+    
+                <div class="contact-item">
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    <a href="tel:0729943541">072 994 3541</a>
+                </div>
+    
+                <div class="contact-item">
+                    <span><i class="fa-brands fa-whatsapp"></i></span>
+                    <a href="https://wa.me/27729943541">072 994 3541</a>
+                </div>
+    
+                <div class="contact-item">
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <a href="mailto:info@empireautodealers.co.za">info@empireautodealers.co.za</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 Empire Trucks & Auto Dealers. All rights reserved.</p>
+    </div>
+    </footer>
+    
+            </body>
+    
+            <script src="scripts.js"></script>
+
+            </html>
+
+
+
+
+

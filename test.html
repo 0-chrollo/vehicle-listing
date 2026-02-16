@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empire Trucks - Listings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .pagination {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+
+
+        /* --- Pagination Styles --- */
+        #pagination-numbers {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin: 40px 0;
+        }
+
+        .page-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 1px solid #e0e0e0;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .page-btn.active {
+            background: #000000;
+            color: #ffffff;
+            border-color: #000000;
+        }
+
+        .page-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .page-btn:hover:not(.active):not(:disabled) {
+            border-color: #000000;
+        }
+    </style>
+</head>
+
+
+<div class="pagination">
+    <div class="truck-grid" id="truck-container">
+        <div class="truck-card"><h3>Truck 1</h3></div>
+        <div class="truck-card"><h3>Truck 2</h3></div>
+        <div class="truck-card"><h3>Truck 3</h3></div>
+        <div class="truck-card"><h3>Truck 4</h3></div>
+        <div class="truck-card"><h3>Truck 5</h3></div>
+        <div class="truck-card"><h3>Truck 6</h3></div>
+        <div class="truck-card"><h3>Truck 7</h3></div>
+        <div class="truck-card"><h3>Truck 8</h3></div>
+        <div class="truck-card"><h3>Truck 9</h3></div>
+    </div>
+
+    <div id="pagination-numbers"></div>
+
+    <script>
+        const cardsPerPage = 4;
+        const truckContainer = document.getElementById('truck-container');
+        const cards = Array.from(truckContainer.getElementsByClassName('truck-card'));
+        const paginationContainer = document.getElementById('pagination-numbers');
+        let currentPage = 1;
+
+        function showPage(page) {
+            currentPage = page;
+            const totalPages = Math.ceil(cards.length / cardsPerPage);
+            
+            // Show/Hide Cards
+            cards.forEach((card, index) => {
+                card.style.display = (index >= (page - 1) * cardsPerPage && index < page * cardsPerPage) ? 'block' : 'none';
+            });
+
+            renderPagination(totalPages);
+        }
+
+        function renderPagination(totalPages) {
+            paginationContainer.innerHTML = '';
+
+            // 1. Left Arrow
+            const prevBtn = document.createElement('button');
+            prevBtn.className = 'page-btn';
+            prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.onclick = () => showPage(currentPage - 1);
+            paginationContainer.appendChild(prevBtn);
+
+            // 2. Number Buttons
+            for (let i = 1; i <= totalPages; i++) {
+                const btn = document.createElement('button');
+                btn.className = `page-btn ${i === currentPage ? 'active' : ''}`;
+                btn.innerText = i;
+                btn.onclick = () => showPage(i);
+                paginationContainer.appendChild(btn);
+            }
+
+            // 3. Right Arrow
+            const nextBtn = document.createElement('button');
+            nextBtn.className = 'page-btn';
+            nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
+            nextBtn.disabled = currentPage === totalPages;
+            nextBtn.onclick = () => showPage(currentPage + 1);
+            paginationContainer.appendChild(nextBtn);
+        }
+
+        showPage(1);
+    </script>
+    </div>
+</body>
+</html>

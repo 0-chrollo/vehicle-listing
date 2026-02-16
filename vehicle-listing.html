@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="listing.css">
+    <title>Empire Trucks & Auto Dealers | Vehicles Page</title>
+
+</head>
+<body>
+        <!-- ===== NAVIGATION ===== -->
+        <!-- ===== NAVIGATION ===== -->
+        <!-- ===== NAVIGATION ===== -->
+ 
+
+        <div class="top-bar">
+            <div class="top-bar-container">
+    
+                <a href="https://wa.me/27729943541" class="top-bar-link">
+                    <span><i class="fa-brands fa-whatsapp"></i></span> 072 994 3541
+                </a>
+                <a href="mailto:info@empireautodealers.co.za" class="top-bar-link">
+                    <span><i class="fa fa-envelope"></i></span> info@empireautodealers.co.za
+                </a>
+            </div>
+        </div>
+          
+        
+
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <div class="logo-icon"><img src="images/mkr-logo.png"></div> 
+                    <div class="logo-main"></div>
+                </div>
+    
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="vehicle-listing.html">Trucks</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+    
+                <button class="burger" id="burgerBtn">
+                    <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="closeIcon" style="display: none;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+    
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="index.html">Home</a>
+                <a href="vehicle-listing.html">Trucks</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+
+
+        <!-- ===== NAVIGATION ===== -->
+        <!-- ===== NAVIGATION ===== -->
+        <!-- ===== NAVIGATION ===== -->
+
+
+        <section class="hero-section">
+            <div class="hero-content">
+                <br>
+                <br>
+                <h1 class="hero-title"></h1>
+                <p class="hero-subtitle">Browse our wide selection of quality used semi trucks and commercial vehicles, all priced to move. Your next truck is right here.</p>
+                <a href="index.html" class="hero-button">Back to Home</a>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <section class="connect">
+                <div class="filter-container">
+                    <!-- Price Filters -->
+                    <div class="filter-section">
+                        <label class="filter-label">Price</label>
+                        <div class="filter-row">
+                            <select id="priceMin">
+                                <option value="">Min</option>
+                                <option value="0">R0</option>
+                                <option value="50000">R50 000</option>
+                                <option value="75000">R75 000</option>
+                                <option value="100000">R100 000</option>
+                                <option value="125000">R125 000</option>
+                                <option value="150000">R150 000</option>
+                                <option value="200000">R200 000</option>
+                                <option value="250000">R250 000</option>
+                                <option value="300000">R300 000</option>
+                                <option value="400000">R400 000</option>
+                                <option value="500000">R500 000</option>
+                            </select>
+                            <select id="priceMax">
+                                <option value="">Max</option>
+                                <option value="50000">R50 000</option>
+                                <option value="75000">R75 000</option>
+                                <option value="100000">R100 000</option>
+                                <option value="125000">R125 000</option>
+                                <option value="150000">R150 000</option>
+                                <option value="200000">R200 000</option>
+                                <option value="250000">R250 000</option>
+                                <option value="300000">R300 000</option>
+                                <option value="400000">R400 000</option>
+                                <option value="500000">R500 000</option>
+                                <option value="750000">R750 000</option>
+                                <option value="1000000">R1 000 000</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <!-- Mileage Filters -->
+                    <div class="filter-section">
+                        <label class="filter-label">Mileage</label>
+                        <div class="filter-row">
+                            <select id="mileageMin">
+                                <option value="">Min</option>
+                                <option value="0">0 km</option>
+                                <option value="10000">10 000 km</option>
+                                <option value="25000">25 000 km</option>
+                                <option value="50000">50 000 km</option>
+                                <option value="75000">75 000 km</option>
+                                <option value="100000">100 000 km</option>
+                                <option value="150000">150 000 km</option>
+                                <option value="200000">200 000 km</option>
+                            </select>
+                            <select id="mileageMax">
+                                <option value="">Max</option>
+                                <option value="10000">10 000 km</option>
+                                <option value="25000">25 000 km</option>
+                                <option value="50000">50 000 km</option>
+                                <option value="75000">75 000 km</option>
+                                <option value="100000">100 000 km</option>
+                                <option value="150000">150 000 km</option>
+                                <option value="200000">200 000 km</option>
+                                <option value="250000">250 000 km</option>
+                                <option value="300000">300 000 km</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <!-- More Filters Toggle -->
+                    <div class="more-filters-section">
+                        <button class="more-filters-toggle" onclick="toggleMoreFilters()">
+                            <span>More Filters</span>
+                            <svg class="chevron" width="16" height="16" viewBox="0 0 16 16">
+                                <path fill="currentColor" d="M8 11L3 6h10z"/>
+                            </svg>
+                        </button>
+                        
+                        <div class="more-filters-content" id="moreFiltersContent">
+                            <!-- Year Filters -->
+                            <div class="filter-section">
+                                <label class="filter-label">Year</label>
+                                <div class="filter-row">
+                                    <select id="yearMin">
+                                        <option value="">Min</option>
+                                        <option value="2000">2000</option>
+                                        <option value="2005">2005</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                    </select>
+                                    <select id="yearMax">
+                                        <option value="">Max</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                    </select>
+                                </div>
+                            </div>
+            
+                            <!-- Transmission Filter -->
+                            <div class="filter-section">
+                                <label class="filter-label">Transmission</label>
+                                <select id="transmission" class="full-width-select">
+                                    <option value="">Any</option>
+                                    <option value="manual">Manual</option>
+                                    <option value="automatic">Automatic</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Apply Filters Button -->
+                    <button class="apply-button" onclick="applyFilters()">Apply Filters</button>
+                </div>
+            
+                <script>
+                    function toggleMoreFilters() {
+                        const content = document.getElementById('moreFiltersContent');
+                        const toggle = document.querySelector('.more-filters-toggle');
+                        
+                        if (content.classList.contains('show')) {
+                            content.classList.remove('show');
+                            toggle.classList.remove('active');
+                        } else {
+                            content.classList.add('show');
+                            toggle.classList.add('active');
+                        }
+                    }
+            
+                    function applyFilters() {
+                        const priceMin = document.getElementById('priceMin').value;
+                        const priceMax = document.getElementById('priceMax').value;
+                        const mileageMin = document.getElementById('mileageMin').value;
+                        const mileageMax = document.getElementById('mileageMax').value;
+                        const yearMin = document.getElementById('yearMin').value;
+                        const yearMax = document.getElementById('yearMax').value;
+                        const transmission = document.getElementById('transmission').value;
+            
+                        console.log('Filters Applied:');
+                        console.log('Price:', priceMin, '-', priceMax);
+                        console.log('Mileage:', mileageMin, '-', mileageMax);
+                        console.log('Year:', yearMin, '-', yearMax);
+                        console.log('Transmission:', transmission);
+            
+                        // You can add your filter logic here
+                        let message = `Filters Applied!\nPrice: ${priceMin || 'Any'} - ${priceMax || 'Any'}\nMileage: ${mileageMin || 'Any'} - ${mileageMax || 'Any'}`;
+                        
+                        if (yearMin || yearMax) {
+                            message += `\nYear: ${yearMin || 'Any'} - ${yearMax || 'Any'}`;
+                        }
+                        
+                        if (transmission) {
+                            message += `\nTransmission: ${transmission.charAt(0).toUpperCase() + transmission.slice(1)}`;
+                        }
+                        
+                        alert(message);
+                    }
+            
+                    // Optional: Apply filters when dropdowns change
+                    document.querySelectorAll('select').forEach(select => {
+                        select.addEventListener('change', function() {
+                            console.log(this.id + ' changed to:', this.value);
+                        });
+                    });
+                </script>
+   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                <div class="pagination">
+              
+                
+
+                
+                <div class="container"  id="container">
+                    <div class="grid">
+                        <!-- Card 1 -->
+                        <div class="card">
+                            <div class="card-image" style="background-image: url('images/pige1.webp')">
+                       
+                                
+                                <div class="card-banner">
+                                    <span>Clear. Simple.</span> <strong>Truck Buying</strong>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Hino 500 Water Tanker 2016</h3>
+                                <div>
+                                    <span class="card-price">R260,000</span>
+                                    <span class="card-mileage">| 237,656 KM</span>
+                                </div>
+                                <div class="card-location">
+                                 
+                                    <span>Good Condition</span>
+                                </div>
+                                <div class="card-stock">Available</div>
+                            </div>
+                            <button class="card-button"> <a href="vehicle-details.html">
+                                
+                                View Vehicle <i class="fas fa-search"></i></a>
+                            </button>
+                        </div>
+            
+                        <!-- Card 2 -->
+                        <div class="card">
+                            <div class="card-image" style="background-image: url('images/pol1.webp');">
+                         
+                                
+                                <div class="card-banner">
+                                    <span>Clear. Simple.</span> <strong>Truck Buying</strong>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Freightliner Argosy Tractor 2015</h3>
+                                <div>
+                                    <span class="card-price">R280,000</span>
+                                    <span class="card-mileage">| 386,555 KM</span>
+                                </div>
+                                <div class="card-location">
+                                    
+                                   
+                                    <span>Good Condition</span>
+                                </div>
+                                <div class="card-stock">Available</div>
+                            </div>
+                            <button class="card-button">
+                                
+                                View Vehicle<i class="fas fa-search"></i>
+                            </button>
+                        </div>
+            
+
+                        <div class="card">
+                            <div class="card-image" style="background-image: url('images/opel1.webp')">
+                      
+                                
+                                <div class="card-banner">
+                                    <span>Clear. Simple.</span> <strong>Truck Buying</strong>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Toyota 4093 Dyna 2012</h3>
+                                <div>
+                                    <span class="card-price">R120,000</span>
+                                    <span class="card-mileage">| 167,895 KM</span>
+                                </div>
+                                <div class="card-location">
+                           
+                                    <span>Good Condition</span>
+                                </div>
+                                <div class="card-stock">Available</div>
+                            </div>
+                            <button class="card-button">
+                                
+                                View Vehicle<i class="fas fa-search"></i>
+                            </button>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+
+            
+    <div id="pagination-numbers"></div>
+
+            
+
+
+           
+            
+                <script>
+                    const cardsPerPage = 4;
+                    const truckContainer = document.getElementById('container');
+                    const cards = Array.from(truckContainer.getElementsByClassName('card'));
+                    const paginationContainer = document.getElementById('pagination-numbers');
+                    let currentPage = 1;
+            
+                    function showPage(page) {
+                        currentPage = page;
+                        const totalPages = Math.ceil(cards.length / cardsPerPage);
+                        
+                        // Show/Hide Cards
+                        cards.forEach((card, index) => {
+                            card.style.display = (index >= (page - 1) * cardsPerPage && index < page * cardsPerPage) ? 'block' : 'none';
+                        });
+            
+                        renderPagination(totalPages);
+                    }
+            
+                    function renderPagination(totalPages) {
+                        paginationContainer.innerHTML = '';
+            
+                        // 1. Left Arrow
+                        const prevBtn = document.createElement('button');
+                        prevBtn.className = 'page-btn';
+                        prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
+                        prevBtn.disabled = currentPage === 1;
+                        prevBtn.onclick = () => showPage(currentPage - 1);
+                        paginationContainer.appendChild(prevBtn);
+            
+                        // 2. Number Buttons
+                        for (let i = 1; i <= totalPages; i++) {
+                            const btn = document.createElement('button');
+                            btn.className = `page-btn ${i === currentPage ? 'active' : ''}`;
+                            btn.innerText = i;
+                            btn.onclick = () => showPage(i);
+                            paginationContainer.appendChild(btn);
+                        }
+            
+                        // 3. Right Arrow
+                        const nextBtn = document.createElement('button');
+                        nextBtn.className = 'page-btn';
+                        nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
+                        nextBtn.disabled = currentPage === totalPages;
+                        nextBtn.onclick = () => showPage(currentPage + 1);
+                        paginationContainer.appendChild(nextBtn);
+                    }
+            
+                    showPage(1);
+                </script>
+                </div>
+        
+
+
+
+
+
+
+
+
+
+                <footer class="footer">
+                    <div class="footer-container">
+                        <!-- Company Info -->
+                        <div class="footer-section">
+                            <h3>Empire Trucks & Auto Dealers</h3>
+                            <p>
+                                Empire Trucks & Auto Dealers is your trusted source for quality used Trucks 
+                                and commercial vehicles. We offer a wide selection of road-ready trucks to suit 
+                                every budget backed by honest service and expert advice.
+                            </p>
+                            
+                            <h3 style="margin-top: 1.5rem;">Follow Us</h3>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/EmpireAutoDealers" target="_blank" class="social-icon" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </div>
+                        </div>
+                    
+                        <!-- Quick Links -->
+                        <div class="footer-section-lu">
+                            <h5>Quick Links</h5>
+                            <br>
+                            <div class="footer-links">
+                                <a href="index.html">Home</a>
+                                <a href="vehicle-listing.html">All Trucks</a>
+                                <a href="contact.html">Contact</a>
+                            </div>
+                        </div>
+                    
+                        <!-- Contact Info -->
+                        <div class="footer-section">
+                            <h3>Contact Us</h3>
+                            <div class="contact-info">
+                    
+                                <div class="contact-item">
+                                    <span><i class="fa-solid fa-phone"></i></span>
+                                    <a href="tel:0729943541">072 994 3541</a>
+                                </div>
+                    
+                                <div class="contact-item">
+                                    <span><i class="fa-brands fa-whatsapp"></i></span>
+                                    <a href="https://wa.me/27729943541">072 994 3541</a>
+                                </div>
+                    
+                                <div class="contact-item">
+                                    <span><i class="fa-solid fa-envelope"></i></span>
+                                    <a href="mailto:info@empireautodealers.co.za">info@empireautodealers.co.za</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-bottom">
+                        <p>&copy; 2026 Empire Trucks & Auto Dealers. All rights reserved.</p>
+                    </div>
+                    </footer>
+                    
+
+
+
+
+
+
+
+</body>
+
+<script SRC="scripts.js"></script>
+
+</html>
