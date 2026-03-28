@@ -1,6 +1,166 @@
 
 
 
+
+
+
+
+
+
+
+/* --- Adjusting your existing .navbar --- */
+.navbar {
+    position: fixed;
+    top: 35px; /* Pushes the nav down so it doesn't hide under the top bar */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(115deg, #ffffff 0%, #d1d1d1 100%);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  
+}
+
+
+/* --- Responsive fix for mobile --- */
+@media (max-width: 768px) {
+    .top-bar-container {
+        gap: 1.5rem;
+        font-size: 0.65rem;
+    }
+}
+    .nav-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .logo-icon img {
+        padding-top:1rem;
+        width: 10rem;
+        height: 3rem;
+     
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #1a1a2e;
+    }
+
+    .logo-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+    }
+
+    .logo-main {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .logo-sub {
+        font-size: 0.75rem;
+        color: #facc15;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+
+
+    .nav-menu a:hover {
+        color: #facc15;
+    }
+
+    .burger {
+        display: none;
+        background: none;
+        border: none;
+        color: #18ab98;
+        cursor: pointer;
+        padding: 0.5rem;
+    
+        transition: background 0.3s;
+    }
+
+
+
+    .burger svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .mobile-menu {
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .mobile-menu.active {
+        max-height: 400px;
+        opacity: 1;
+        padding-bottom: 1rem;
+    }
+
+
+
+    .mobile-menu a:hover {
+        color:  rgb(21, 22, 22);
+    }   
+
+    @media (max-width: 768px) {
+        .nav-menu {
+            display: none;
+        }
+
+        .burger {
+            display: block;
+        }
+
+        .mobile-menu {
+            display: block;
+        }
+
+        .decorative-box,
+        .decorative-circle {
+            display: none;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* HERO SECTION */
 /* HERO SECTION */
 /* HERO SECTION */
@@ -8,33 +168,25 @@
 /* HERO SECTION */
 /* HERO SECTION */
 
-.hero-section {
+.hero-section-1 {
     line-height: 1.6;
     position: relative;
-    min-height: 55vh;
+    min-height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 2rem;
     overflow: hidden;
+    background: linear-gradient(115deg, #17a18f 0%,  #0c6054 100%);
 }
 
 
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('images/pol1.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: brightness(0.3);
-    z-index: -1;
-}
+
+
+
+
+
 
 .hero-content {
     position: relative;
@@ -45,13 +197,14 @@
     animation: fadeInUp 1s ease-out;
 }
 
-.hero-title {
-    font-size: clamp(2rem);
-    font-weight: 700;
+.hero-title-1  {
+    color: white;
+    font-size: clamp(1rem);
+    font-weight: 300;
     margin-bottom: 1.5rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 5px 5px 12px rgba(0, 0, 0, 0.792);
 }
 
 .hero-subtitle {
@@ -112,9 +265,9 @@
 
     }
 
-    .hero-title {
+    .hero-title-1 {
         margin-bottom: 1rem;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     .hero-subtitle {
@@ -228,7 +381,7 @@ select:hover {
     font-weight: 600;
     border: none;
     border-radius: 2px;
-    background: linear-gradient(115deg, #112532 0%, #18364a 100%); 
+    background: linear-gradient(114deg, #189b8a 0%,  #0c5e52 100%);
     color: white;
     cursor: pointer;
     transition: background-color 0.2s;
@@ -414,7 +567,7 @@ select:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(115deg, #112532 0%, #18364a 100%); 
+    background: linear-gradient(114deg, #189b8a 0%,  #0c5e52 100%);
     color: white;
     padding: 6px 10px;
     font-size: 11px;
@@ -478,8 +631,8 @@ font-weight: 400;
 text-transform: uppercase;
 letter-spacing: 1px;
 color: #ffffff;
-background: linear-gradient(115deg, #307aab 0%, #145077 100%); 
-border: 3px solid #174c16;
+background: linear-gradient(114deg, #189b8a 0%,  #0c5e52 100%); 
+border: 3px solid #ffffff;
 border-radius: 50px;
 width: fit-content;
     margin-top: 8px;
@@ -491,7 +644,7 @@ width: fit-content;
 .card-button {
     width: 100%;
     padding: 10px 20px;
-    background: linear-gradient(115deg, #112532 0%, #18364a 100%); 
+    background: linear-gradient(114deg, #189b8a 0%,  #0c5e52 100%);
     color: white;
     border: none;
     font-size: 14px;

@@ -6,24 +6,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <link rel="stylesheet" href="styles.css">
-    <title>MKR Auto Sales | Quality Vehicles in Gqeberha</title>
+    <link rel="stylesheet" href="listing.css">
+
+    <title>Autoaddicts| Quality Vehicles in Eastern Cape</title>
 
 </head>
 <body>
-        <!-- ===== NAVIGATION ===== -->
-        <!-- ===== NAVIGATION ===== -->
-        <!-- ===== NAVIGATION ===== -->
- 
 
+        <!-- ===== NAVIGATION ===== -->
+        <!-- ===== NAVIGATION ===== -->
+        <!-- ===== NAVIGATION ===== -->
         <div class="top-bar">
           <div class="top-bar-container">
           
               <a href="https://wa.me/27662912809" class="top-bar-link">
-                  <span><i class="fa-brands fa-whatsapp"></i></span> 066 291 2809
+                  <span><i class="fa-brands fa-whatsapp"></i></span> whatsapp
               </a>
               <a href="mailto:finance@mkrautosales.co.za" class="top-bar-link">
-                  <span><i class="fa fa-envelope"></i></span> finance@mkrautosales.co.za
-              </a>
+                  <span><i class="fa fa-envelope"></i></span> media@autoaddicts.co.za </a>
           </div>
       </div>
         
@@ -31,14 +31,14 @@
         <nav class="navbar" id="navbar">
             <div class="nav-container">
                 <div class="logo">
-                    <div class="logo-icon"><img src="images/mkr-logo.png"></div> 
+                    <div class="logo-icon"><img src="autoaddicts.png"></div> 
                     <div class="logo-main"></div>
                 </div>
     
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" id="current">Home</a></li>
                     <li><a href="vehicle-listing.html">showroom</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#sell">Sell Vehicle</a></li>
                 </ul>
     
                 <button class="burger" id="burgerBtn">
@@ -52,9 +52,9 @@
             </div>
     
             <div class="mobile-menu" id="mobileMenu">
-                <a href="index.html">Home</a>
+                <a href="index.html" id="current">Home</a>
                 <a href="vehicle-listing.html">showroom</a>
-                <a href="contact.html">Contact</a>
+                <a href="#sell">Sell Vehicle</a>
             </div>
         </nav>
 
@@ -65,11 +65,197 @@
 
         <section class="hero-section">
           <div class="hero-content">
-              <h1 class="hero-title">MKR Auto Sales</h1>
-              <p class="hero-subtitle">Driven by Instinct, and committed to bridging the gap between aspiration and reality.</p>
+              <h1 class="hero-title">auto<span style="color: #53c0b1;">Addicts</span></h1>
+              <p class="hero-subtitle">Your next car is closer than you think.</p>
               <a href="vehicle-listing.html" class="hero-button">Showroom</a>
           </div>
       </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <style>
+ 
+        .body-types {
+          position: relative;
+          padding: 80px 24px; /* ← section top/bottom & left/right */
+          background: url('vims/Carbg.webp') center/cover no-repeat fixed;
+          font-family: 'Barlow', sans-serif;
+        }
+        .body-types::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: rgba(8,8,8,0.16);
+        }
+    
+        .bt-inner {
+          position: relative;
+          max-width: 1100px;
+          margin: 0 auto;
+        }
+    
+        .bt-inner h3 {
+          font-family: 'Barlow Condensed', sans-serif;
+          font-size: clamp(1.3rem, 2.5vw, 2.5rem);
+          font-weight: 400;
+          text-transform: uppercase;
+          color: #fff;
+          margin-bottom: 10px;
+        }
+        .bt-inner h3 span { color: #3dffe5; }
+    
+        .bt-inner > p {
+          font-size: 0.85rem;
+          color: rgba(255, 255, 255, 0.735);
+          line-height: 1.7;
+          max-width: 500px;
+          margin-bottom: 40px;
+        }
+    
+        .bt-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px; /* ← mobile gap */
+        }
+    
+        @media (min-width: 860px) {
+          .bt-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px; /* ← desktop gap between cards */
+          }
+        }
+    
+        .bt-card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 5px;
+          padding: 2px 12px 18px; /* ← card inner padding */
+          border-bottom: 2px solid transparent;
+       
+          text-decoration: none;
+          color: #fff;
+          transition: background .2s, border-bottom-color .2s, transform .2s;
+        }
+        .bt-card:hover {
+          background: rgba(255,255,255,0.08);
+         
+          transform: translateY(-3px);
+        }
+    
+        .bt-card img {
+          width: 120px;  /* ← mobile icon size */
+          height: 120px;
+          object-fit: contain;
+          transition: filter .2s;
+        }
+        @media (min-width: 860px) {
+          .bt-card img {
+            width: 90px;  /* ← desktop icon size */
+            height: 90px;
+          }
+        }
+        .bt-card:hover img {
+          filter: brightness(0) saturate(100%) invert(19%) sepia(93%) saturate(5000%) hue-rotate(355deg) brightness(95%);
+        }
+    
+        .bt-card span {
+          font-family: 'Barlow Condensed', sans-serif;
+          font-size: 0.92rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+      </style>
+    
+    
+      <section class="body-types">
+        <div class="bt-inner">
+    
+          <h3>Browse by <span>Body Type</span></h3>
+          <p>Select a vehicle category below to explore our full range tailored to your needs.</p>
+    
+          <div class="bt-grid">
+    
+            <a class="bt-card" href="#/vehicles?type=hatch">
+              <img src="vims/hatch.png" alt="Hatch"/>
+              <span></span>
+            </a>
+    
+            <a class="bt-card" href="#/vehicles?type=sedan">
+              <img src="vims/sedan.png" alt="Sedan"/>
+              <span></span>
+            </a>
+    
+            <a class="bt-card" href="#/vehicles?type=suv">
+              <img src="vims/suv.png" alt="SUV"/>
+              <span></span>
+            </a>
+    
+            <a class="bt-card" href="#/vehicles?type=motorcycle">
+              <img src="vims/motorcycle.png" alt="Motorcycle"/>
+              <span></span>
+            </a>
+    
+            <a class="bt-card" href="#/vehicles?type=panel-van">
+              <img src="vims/panelvan.png" alt="Panel Van"/>
+              <span></span>
+            </a>
+    
+            <a class="bt-card" href="#/vehicles?type=single-cab">
+              <img src="vims/singlecab.png" alt="Single Cab"/>
+              <span></span>
+            </a>
+    
+          </div>
+        </div>
+      </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -110,10 +296,10 @@
 
     .faw-hero-title {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(32px, 4vw, 48px);
-      font-weight: 800;
+      font-size: clamp(8px, 2vw, 30px);
+      font-weight: 550;
       text-transform: uppercase;
-      color: #1a2744;
+      color: #1d8375 ;
       letter-spacing: 0.02em;
       line-height: 1.0;
       margin-bottom: 20px;
@@ -135,13 +321,14 @@
     .faw-btn-dark {
         
       display: inline-block;
-      padding: 10px 22px;
-      border: 2px solid #1a2744;
-      color: #112532 ;
+     
+      padding:9px 10px;
+      border: 2px solid  #1d8375 ;;
+      color:  #1d8375 ;
       border-radius: 30px;
       font-family: 'Barlow', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
+      font-size: 10px;
+      font-weight: 800;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       text-decoration: none;
@@ -152,8 +339,14 @@
       width: fit-content;
     }
 
+    #sell{
+      background: #127e70;
+      color: #e8eaee;
+
+    }
+
     .faw-btn-dark:hover {
-      background: #1a2744;
+      background: #1d8375 ;
       color: #fff;
     }
 
@@ -178,7 +371,7 @@
     .faw-service-img {
       flex: 0 0 38%;
       max-width: 38%;
-      background-image: url('images/bg.webp');
+      background-image: url('vims/autoaddictsfl.jpg');
       background-size: cover;
       background-position: center;
       min-height: 340px;
@@ -188,7 +381,7 @@
     .faw-service-text {
       flex: 0 0 62%;
       max-width: 62%;
-      background: linear-gradient(115deg, #112532 0%, #18364a 100%); /* Matches your scrolled navbar color */
+      background: linear-gradient(115deg, #128e7e 0%,  #0b534a 100%);
  
       padding: 56px 52px;
       display: flex;
@@ -231,7 +424,8 @@
       display: inline-block;
       padding: 10px 22px;
       border: 2px solid #ffffff;
-      color: #ffffff;
+      
+      color: #127e70;
       font-family: 'Barlow', sans-serif;
       font-size: 11px;
       font-weight: 700;
@@ -240,14 +434,15 @@
       text-transform: uppercase;
       text-decoration: none;
       cursor: pointer;
-      background: transparent;
+      background: #fff;
       transition: background 0.2s, color 0.2s;
       width: fit-content;
     }
 
     .faw-btn-white:hover {
-      background: #ffffff;
-      color: #1a2744;
+      border: 2px solid #ffffff;
+     background: transparent;
+      color: #ffffff;
     }
 
     /* ─── MOBILE: stack vertically ──────────────────────────── */
@@ -303,53 +498,475 @@
         font-size: 32px;
       }
     }
+
+    .faw-auto{
+      color:black;
+    }
   </style>
 
   <!-- ── SECTION 1: MKR Auto Sales Hero ── -->
-<section class="faw-hero-wrap">
-  <div class="faw-hero-text">
-      <p class="faw-eyebrow">Trusted. Quality. Road-Ready.</p>
-      <h1 class="faw-hero-title">MKR Auto Sales</h1>
-      <p>
-          Founded in 2018, MKR Auto Sales has built a strong reputation for joining
-          quality with affordability. We pride ourselves on offering a premium
-          selection of vehicles that meet the needs and aspirations of every
-          customer who walks through our doors.
-      </p>
-      <p>
-          Whether you're looking for your first car or upgrading to something
-          better, our experienced team is here to guide you every step of the way,
-          from browsing our catalogue to driving off the lot. Your next vehicle deal starts here.
-      </p>
-      <a href="vehicle-listing.html" class="faw-btn-dark">showroom</a>
-  </div>
+  <section class="faw-hero-wrap">
+    <div class="faw-hero-text">
+        <p class="faw-eyebrow">Trusted. Quality. Road Ready.</p>
+        <h1 class="faw-hero-title"><span class="faw-auto">Auto</span>Addicts</h1>
+        <p>
+            Founded in 2017, Auto Addicts has grown from a small passion project 
+            into one of Gqeberha's most trusted used car dealerships with a team 
+            of 35 and a reputation built on honesty, quality, and real results for 
+            real people.
+        </p>
+        <p>
+            Whether you're buying your first car, upgrading, or looking to sell, 
+            our team is here to make the process straightforward and stress-free 
+            from the moment you walk in to the moment you drive away.
+        </p>
+        <div style="display: flex; gap:15px;">
+          <a href="vehicle-listing.html" class="faw-btn-dark">Showroom</a>
+          <a href="#sellvehicle" class="faw-btn-dark" id="sell">Sell Your Car</a>
+        </div>
+    </div>
+  
+    <div class="faw-hero-img" role="img" aria-label="Auto Addicts — dealer handing keys to a satisfied client"></div>
+  </section>
 
-  <!-- Image of dealer handing keys to a client -->
-  <div class="faw-hero-img" role="img" aria-label="MKR Auto Sales — dealer handing keys to a satisfied client"></div>
-</section>
+
+
+
+
+
+
 
   <!-- ── SECTION 2: Service Department ── -->
   <section class="faw-service-wrap">
 
-    <!-- Image of showroom / vehicle -->
-    <div class="faw-service-img" role="img" aria-label="MKR Auto Sales — vehicle showroom view"></div>
+    <div class="faw-service-img" role="img" aria-label="Auto Addicts — vehicle showroom view"></div>
 
     <div class="faw-service-text">
         <p class="faw-eyebrow-blue">We Go the Extra Mile</p>
         <h2 class="faw-service-title">Our Promise to You</h2>
         <p>
-            At MKR Auto Sales, we're more than just a car dealership — we're your
-            long-term partner on the road. Our knowledgeable sales team is committed
-            to helping you find the right vehicle at the right price, with honest
-            advice and zero pressure. Your satisfaction drives everything we do.
+            At Auto Addicts, we believe buying or selling a car should be a good 
+            experience not a stressful one. Our team takes the time to understand 
+            what you need, gives you honest advice, and never pressures you into a 
+            decision. We've been doing this since 2017 and our reputation means 
+            everything to us.
         </p>
-        <a href="contact.html" class="faw-btn-white">Contact Us</a>
+        <a href="vehicle-listing.html" class="faw-btn-white">Browse Showroom</a>
     </div>
 
 </section>
 
 
 
+<style>
+
+
+
+
+  .just-in {
+  
+    font-family: 'DM Sans', sans-serif;
+    padding: 60px 0 80px;
+    min-height: 5vh;
+  }
+
+  /* ── Section Header ── */
+  .section-header {
+    padding: 0 40px 36px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+
+
+  .section-label {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: black;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 800;
+    color: black;
+    line-height: 1.1;
+  }
+
+  .section-desc {
+    margin-top: 10px;
+    font-size: 15px;
+    color: black;
+    max-width: 400px;
+  }
+
+  /* ── Arrow Buttons — desktop only ── */
+  .nav-arrows {
+    display: none;
+    gap: 10px;
+    flex-shrink: 0;
+    margin-bottom: 4px;
+  }
+
+  @media (min-width: 768px) {
+    .nav-arrows { display: flex; }
+  }
+
+  .nav-arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 3px solid #0b8777;
+    background: transparent;
+    color: #11a28f;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s, opacity 0.2s;
+    line-height: 1;
+  }
+
+  .nav-arrow:hover {
+    background:#11a28f;
+    color: #fff;
+  }
+
+  .nav-arrow:disabled {
+    opacity: 0.25;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  /* ── Scroll Track ── */
+  .scroll-wrapper {
+    position: relative;
+  }
+
+  .vehicles-track {
+    display: flex;
+    gap: 20px;
+    padding: 0 0 28px 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 15px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .track-spacer {
+    flex: 0 0 40px;
+    min-width: 40px;
+  }
+
+  .vehicles-track::-webkit-scrollbar { display: none; }
+
+  /* ── Vehicle Card ── */
+  .vehicle-card {
+    flex: 0 0 300px;
+    height: auto;
+    border-radius: 5px;
+    padding: 5px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Card colour variants */
+  .vehicle-card.blue   { background: none; }
+  .vehicle-card.dark   { background: var(--card-dark); }
+  .vehicle-card.accent { background: var(--card-accent); }
+
+  /* Subtle radial glow */
+  .vehicle-card::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* ── Card: Top row ── */
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+
+  .card-year {
+    color: rgba(255,255,255,0.5);
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  /* ── Scroll Progress Bar ── */
+  .scroll-bar-wrap {
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .scroll-bar-track {
+    flex: 1;
+    height: 9px;
+    background: rgb(179, 179, 179);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .scroll-bar-thumb {
+    height: 100%;
+    width: 30%;
+    background: linear-gradient(115deg, #128e7e 0%,  #0b534a 100%);
+    border-radius: 10px;
+    transition: width 0.1s;
+  }
+
+  .scroll-count {
+    font-size: 15px;
+    color: #0b534a ;
+    white-space: nowrap;
+    min-width: 40px;
+    text-align: right;
+  }
+</style>
+
+<section class="just-in">
+
+<div class="section-header">
+  <div class="section-header-text">
+    <span class="section-label">Fresh Arrivals</span>
+    <h2 class="section-title">Just In <span style="color:#11a28f"> Vehicles </span></h2>
+    <p class="section-desc">Brand new stock added directly to our showroom floor, be the first to grab a deal. &#8594; &#8594;</p>
+  </div>
+
+  <!-- Desktop-only arrows, top-right of the header -->
+  <div class="nav-arrows">
+    <button class="nav-arrow" id="arrowPrev" aria-label="Previous">&#8592;</button>
+    <button class="nav-arrow" id="arrowNext" aria-label="Next">&#8594;</button>
+  </div>
+</div>
+
+<div class="scroll-wrapper">
+  <div class="vehicles-track" id="track">
+    <div class="track-spacer"></div>
+
+    <!-- ═══════════════════════════════════════
+         VEHICLE CARDS
+         Add your own content inside each card.
+         Card colours: blue | dark | accent
+         Copy/paste a block to add more cards.
+    ════════════════════════════════════════ -->
+
+    <div class="vehicle-card blue">
+
+      <div class="card">
+        <div class="card-image" style="background-image: url('cars/maincar.jpeg')">
+   
+            
+            <div class="card-banner">
+                <span>Clear. Simple.</span> <strong>Vehicle Purchase</strong>
+            </div>
+        </div>
+        <div class="card-content">
+            <h3 class="card-title">Renault Clio 4 1.2 Authentique 2014</h3>
+            <div>
+                <span class="card-price">R59,000</span>
+                <span class="card-mileage">| 195,012 KM</span>
+            </div>
+            <div class="card-location">
+             
+                <span>Fair Condition</span>
+            </div>
+            <div class="card-stock">Available</div>
+        </div>
+        <button class="card-button"> <a href="vehicle-details.html">
+            
+            View Vehicle <i class="fas fa-search"></i></a>
+        </button>
+    </div>
+
+
+    </div>
+
+    <div class="vehicle-card dark">
+
+      <div class="card">
+        <div class="card-image" style="background-image: url('cars/toyota.jpeg');">
+     
+            
+            <div class="card-banner">
+                <span>Clear. Simple.</span> <strong>Vehicle Purchase</strong>
+            </div>
+        </div>
+        <div class="card-content">
+            <h3 class="card-title">Toyota Corolla 1.6 Professional 2010</h3>
+            <div>
+                <span class="card-price">R69,00</span>
+                <span class="card-mileage">| 562,674 KM</span>
+            </div>
+            <div class="card-location">
+                
+               
+                <span>Good Condition</span>
+            </div>
+            <div class="card-stock">Available</div>
+        </div>
+        <button class="card-button">
+            
+            View Vehicle<i class="fas fa-search"></i>
+        </button>
+    </div>
+
+    </div>
+
+
+
+    <div class="vehicle-card accent">
+
+
+
+      <div class="card">
+        <div class="card-image" style="background-image: url('cars/opel.jpeg')">
+  
+            
+            <div class="card-banner">
+                <span>Clear. Simple.</span> <strong>Vehicle Purchase</strong>
+            </div>
+        </div>
+        <div class="card-content">
+            <h3 class="card-title">Opel Corsa 1.0T Ecoflex Enjoy 2016</h3>
+            <div>
+                <span class="card-price">R69,000</span>
+                <span class="card-mileage">| 172,336 KM</span>
+            </div>
+            <div class="card-location">
+       
+                <span>Fair Condition</span>
+            </div>
+            <div class="card-stock">Available</div>
+        </div>
+        <button class="card-button">
+            
+            View Vehicle<i class="fas fa-search"></i>
+        </button>
+    </div>
+
+
+      
+    </div>
+
+    <div class="vehicle-card blue">
+     
+
+      <div class="card">
+        <div class="card-image" style="background-image: url('cars/polo.jpeg')">
+  
+            
+            <div class="card-banner">
+                <span>Clear. Simple.</span> <strong>Vehicle Purchase</strong>
+            </div>
+        </div>
+        <div class="card-content">
+            <h3 class="card-title">Volkswagen Polo Vivo GP 1.4 Trendline 2016</h3>
+            <div>
+                <span class="card-price">R89,000</span>
+                <span class="card-mileage">| 246,555 KM</span>
+            </div>
+            <div class="card-location">
+       
+                <span>Good Condition</span>
+            </div>
+            <div class="card-stock">Available</div>
+        </div>
+        <button class="card-button">
+            
+            View Vehicle<i class="fas fa-search"></i>
+        </button>
+    </div>
+      
+
+    </div>
+
+
+     <!--
+    <div class="vehicle-card blue">
+
+ 
+      your card content here 
+    </div>
+    -->
+
+
+
+  </div><!-- /vehicles-track -->
+  
+  <div class="scroll-bar-wrap">
+    <div class="scroll-bar-track">
+      
+      <div class="scroll-bar-thumb" id="thumb"></div>
+    </div>
+    <span class="scroll-count" id="count">1 / 4</span>
+  </div>
+  
+</div>
+
+
+<script>
+  const track     = document.getElementById('track');
+  const thumb     = document.getElementById('thumb');
+  const count     = document.getElementById('count');
+  const arrowPrev = document.getElementById('arrowPrev');
+  const arrowNext = document.getElementById('arrowNext');
+  const cards     = track.querySelectorAll('.vehicle-card');
+  const total     = cards.length;
+
+  // Scroll exactly one card width + gap per click
+  function scrollByCard(direction) {
+    const cardWidth = cards[0].offsetWidth + 20;
+    track.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+  }
+
+  arrowPrev.addEventListener('click', () => scrollByCard(-1));
+  arrowNext.addEventListener('click', () => scrollByCard(1));
+
+  function updateUI() {
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    const pct = maxScroll > 0 ? track.scrollLeft / maxScroll : 0;
+    thumb.style.width = Math.max(20, pct * 100) + '%';
+
+    // Disable arrows at the ends
+    arrowPrev.disabled = track.scrollLeft <= 0;
+    arrowNext.disabled = track.scrollLeft >= maxScroll - 1;
+
+    // Card counter
+    let closest = 0, minDist = Infinity;
+    cards.forEach((c, i) => {
+      const dist = Math.abs(c.getBoundingClientRect().left - track.getBoundingClientRect().left);
+      if (dist < minDist) { minDist = dist; closest = i; }
+    });
+    count.textContent = (closest + 1) + ' / ' + total;
+  }
+
+  track.addEventListener('scroll', updateUI);
+  updateUI(); // set initial state
+</script>
+</section>
 
 
 
@@ -360,39 +977,34 @@
       <!-- Company Info -->
       <div class="footer-section">
         <div class="foo">
-        <div class="foo-icon"><img src="images/mkr-logo.png"></div> 
+          <div class="foo-icon"><img src="autoaddicts.png"></div> 
         </div>
         <style>
            .foo {
-        display: flex;
-        align-items: center;
-       
-    }
-
-    .foo-icon img {
-    
-        width: 7rem;
-
-     
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #1a1a2e;
-    }
-
+            display: flex;
+            align-items: center;
+          }
+          .foo-icon img {
+              width: 9rem;
+              padding: 10px;
+              border-radius: 8px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 1.5rem;
+              font-weight: bold;
+              color: #1a1a2e;
+          }
         </style>
           <p>
-              MKR Auto Sales is your trusted source for quality vehicles in Gqeberha.
-              Founded in 2018, we join quality with affordability, backed by honest
-              service and expert advice.
+              Auto Addicts is Gqeberha's trusted used car dealership — 
+              founded in 2017 and built on honest service, quality vehicles, 
+              and a team that genuinely cares about getting you the right deal.
           </p>
           
           <h3 style="margin-top: 1.5rem;">Follow Us</h3>
           <div class="social-links">
-              <a href="https://www.facebook.com/mkrautosales.co.za" target="_blank" class="social-icon" aria-label="Facebook">
+              <a href="#" target="_blank" class="social-icon" aria-label="Facebook">
                   <i class="fa-brands fa-facebook-f"></i>
               </a>
           </div>
@@ -405,7 +1017,6 @@
           <div class="footer-links">
               <a href="index.html">Home</a>
               <a href="vehicle-listing.html">All Vehicles</a>
-              <a href="contact.html">Contact</a>
           </div>
       </div>
 
@@ -416,32 +1027,31 @@
 
               <div class="contact-item">
                   <span><i class="fa-solid fa-phone"></i></span>
-                  <a href="tel:0414506210">041 450 6210</a>
+                  <a href="tel:+27827226183">+27 82 722 6183</a>
               </div>
 
               <div class="contact-item">
                   <span><i class="fa-brands fa-whatsapp"></i></span>
-                  <a href="https://wa.me/27662912809">066 291 2809</a>
+                  <a href="https://wa.me/27827226183">+27 82 722 6183</a>
               </div>
 
               <div class="contact-item">
                   <span><i class="fa-solid fa-envelope"></i></span>
-                  <a href="mailto:finance@mkrautosales.co.za">finance@mkrautosales.co.za</a>
+                  <a href="mailto:media@autoaddicts.co.za">media@autoaddicts.co.za</a>
               </div>
 
               <div class="contact-item">
                   <span><i class="fa-solid fa-location-dot"></i></span>
-                  <span>495 Cape Rd, Westering, Gqeberha, 6025</span>
+                  <span>Gqeberha, Eastern Cape</span>
               </div>
           </div>
       </div>
   </div>
 
   <div class="footer-bottom">
-      <p>&copy; 2026 MKR Auto Sales. All rights reserved.</p>
+      <p>&copy; 2026 Auto Addicts. All rights reserved.</p>
   </div>
 </footer>
-
     
         </body>
 
