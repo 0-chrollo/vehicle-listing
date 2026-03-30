@@ -218,33 +218,10 @@
     margin-right: auto;
 }
 
-.hero-button {
-    display: inline-block;
-    padding: 1.2rem 2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #ffffff;
-    background-color: #111112;
-    border: 2px solid #ffffff;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(118, 118, 118, 0.4);
-}
 
-.hero-button:hover {
-    background-color: transparent;
-    border-color: #ffffff;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
-}
 
-.hero-button:active {
-    transform: translateY(-1px);
-}
+
+
 
 /* Animation */
 @keyframes fadeInUp {
@@ -275,10 +252,7 @@
         font-size:0.97rem;
     }
 
-    .hero-button {
-        padding: 0.7rem 2rem;
-        font-size: 0.80rem;
-    }
+
 }
 
 @media (max-width: 480px) {
@@ -286,10 +260,7 @@
         padding: 1rem;
     }
 
-    .hero-button {
-        padding: 0.9rem 1.8rem;
-        font-size: 0.95rem;
-    }
+
 }
 
 /* HERO SECTION */

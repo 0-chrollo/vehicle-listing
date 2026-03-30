@@ -341,8 +341,8 @@ a {
 
 .hero-button {
     display: inline-block;
-    padding: 1.2rem 2rem;
-    font-size: 1rem;
+    padding: 1rem 2rem;
+    font-size: 0.50rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -407,9 +407,12 @@ a {
     }
 
     .hero-button {
-        padding: 0.9rem 1.8rem;
-        font-size: 0.95rem;
+        padding: 0.70rem 1rem;
+        font-size: 0.80rem;
+        margin: 10px;
     }
+
+ 
 }
 
 /* HERO SECTION */
