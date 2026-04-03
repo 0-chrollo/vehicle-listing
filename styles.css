@@ -1155,13 +1155,13 @@ border-radius: 50px;
 
  
         .vehicles-section {
-            background: linear-gradient(115deg, #ffffff 0%,  #d0d0d0 100%);
+
             padding: 72px 40px;
             text-align: left;
           }
       
           .vehicles-section h3 {
-            font-family: 'Barlow Condensed';
+         
             font-size: clamp(1.6rem, 3vw, 3rem);
             font-weight: 700;
             letter-spacing: .04em;
@@ -1228,7 +1228,7 @@ border-radius: 50px;
             background: radial-gradient(ellipse, rgba(0, 0, 0, 0.287) 0%, transparent 80%);
             border-radius: 50%;
             transition: opacity .35s;
-            z-index: 0;
+     
           }
       
           .vehicle-card:hover .img-wrap::after {
@@ -1242,25 +1242,11 @@ border-radius: 50px;
             object-fit: contain;
             position: relative;
             z-index: 1;
-            /* uncomment once you have transparent-bg images: */
-            /* filter: drop-shadow(0 4px 12px rgba(0,0,0,.12)); */
+         
+         filter: drop-shadow(0 4px 12px rgba(0,0,0,.12)); 
           }
       
-          /* ── Bordered label ── */
-          .vehicle-label {
-            display: inline-block;
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: .78rem;
-            font-weight: 700;
-            letter-spacing: .18em;
-            text-transform: uppercase;
-            color: #ffffff;
-            
-            background: linear-gradient(115deg, #38beac 0%,  #148071 100%);
-            border-radius: 25px;
-            padding: 4px 12px;
-            transition: background .25s, color .25s;
-          }
+        
       
         
       
