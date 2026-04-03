@@ -75,73 +75,9 @@
         color: #facc15;
     }
 
-    .nav-menu {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-    }
-
-
-    .nav-menu a:hover {
-        color: #facc15;
-    }
-
-    .burger {
-        display: none;
-        background: none;
-        border: none;
-        color: #18ab98;
-        cursor: pointer;
-        padding: 0.5rem;
-    
-        transition: background 0.3s;
-    }
 
 
 
-    .burger svg {
-        width: 28px;
-        height: 28px;
-    }
-
-    .mobile-menu {
-        display: none;
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    }
-
-    .mobile-menu.active {
-        max-height: 400px;
-        opacity: 1;
-        padding-bottom: 1rem;
-    }
-
-
-
-    .mobile-menu a:hover {
-        color:  rgb(21, 22, 22);
-    }   
-
-    @media (max-width: 768px) {
-        .nav-menu {
-            display: none;
-        }
-
-        .burger {
-            display: block;
-        }
-
-        .mobile-menu {
-            display: block;
-        }
-
-        .decorative-box,
-        .decorative-circle {
-            display: none;
-        }
-    }
 
 
 

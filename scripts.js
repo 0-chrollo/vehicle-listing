@@ -210,3 +210,21 @@ const track     = document.getElementById('track');
 // New Vehicle arrival Slide Function
 // New Vehicle arrival Slide Function
 // New Vehicle arrival Slide Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Pagination Functionality & Logic
+//Pagination Functionality & Logic
+//Pagination Functionality & Logic
+//Pagination Functionality & Logic
