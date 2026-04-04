@@ -216,15 +216,3 @@ const track     = document.getElementById('track');
 
 
 
-
-
-
-
-
-
-
-
-//Pagination Functionality & Logic
-//Pagination Functionality & Logic
-//Pagination Functionality & Logic
-//Pagination Functionality & Logic
