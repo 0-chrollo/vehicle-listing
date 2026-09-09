@@ -144,393 +144,386 @@
           </style>
         
         <section class="search-algorithm">
-          <div class="search-wrapper">
-            <div class="search-bar">
-              <input type="text" placeholder="Search by Make or Model..." />
-              <button class="search-btn" aria-label="Search">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="11" cy="11" r="7"/>
-                  <line x1="16.5" y1="16.5" x2="22" y2="22"/>
-                </svg>
-              </button>
+            <div class="search-wrapper">
+              <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by Make or Model..." />
+                <button class="search-btn" aria-label="Search">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="7"/>
+                    <line x1="16.5" y1="16.5" x2="22" y2="22"/>
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-        </section>
-        
+          </section>
+  
+       <section class="connect">
+                  <div class="filter-container">
+                      <!-- Price Filters -->
+                      <div class="filter-section">
+                          <label class="filter-label">Price</label>
+                          <div class="filter-row">
+                              <select id="priceMin">
+                                  <option value="">Min</option>
+                                  <option value="0">R0</option>
+                                  <option value="100000">R100 000</option>
+                                  <option value="300000">R300 000</option>
+                              </select>
+                              <select id="priceMax">
+                                  <option value="">Max</option>
+                                  <option value="100000">R100 000</option>
+                                  <option value="300000">R300 000</option>
+                                  <option value="1000000">R1 000 000</option>
+                              </select>
+                          </div>
+                      </div>
+  
+                      <!-- Mileage Filters -->
+                      <div class="filter-section">
+                          <label class="filter-label">Mileage</label>
+                          <div class="filter-row">
+                              <select id="mileageMin">
+                                  <option value="">Min</option>
+                                  <option value="0">0 km</option>
+                                  <option value="100000">100 000 km</option>
+                              </select>
+                              <select id="mileageMax">
+                                  <option value="">Max</option>
+                                  <option value="100000">100 000 km</option>
+                                  <option value="300000">300 000 km</option>
+                              </select>
+                          </div>
+                      </div>
+  
+                      <!-- More Filters Toggle -->
+                      <div class="more-filters-section">
+                          <button class="more-filters-toggle" onclick="toggleMoreFilters()">
+                              <span>More Filters</span>
+                              <svg class="chevron" width="16" height="16" viewBox="0 0 16 16">
+                                  <path fill="currentColor" d="M8 11L3 6h10z"/>
+                              </svg>
+                          </button>
+  
+                          <div class="more-filters-content" id="moreFiltersContent">
+                              <!-- Year Filters -->
+                              <div class="filter-section">
+                                  <label class="filter-label">Year</label>
+                                  <div class="filter-row">
+                                      <select id="yearMin">
+                                          <option value="">Min</option>
+                                          <option value="2010">2010</option>
+                                          <option value="2020">2020</option>
+                                      </select>
+                                      <select id="yearMax">
+                                          <option value="">Max</option>
+                                          <option value="2020">2020</option>
+                                          <option value="2026">2026</option>
+                                      </select>
+                                  </div>
+                              </div>
+  
+                              <!-- Transmission Filter -->
+                              <div class="filter-section">
+                                  <label class="filter-label">Transmission</label>
+                                  <select id="transmission" class="full-width-select">
+                                      <option value="">Any</option>
+                                      <option value="Manual">Manual</option>
+                                      <option value="Automatic">Automatic</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+  
+                      <!-- Apply Filters Button -->
+                      <button class="apply-button" onclick="applyFilters()"><i class="fa-solid fa-filter"></i> Apply Filters </button>
+                  </div>
+     </section>
+  
+                  <div class="pagination">
+  
+                  <div class="container" id="container">
+                      <div class="grid" id="vehicleGrid">
+                          <!-- Vehicle cards are injected here by PocketBase -->
+                      </div>
+                  </div>
+              </div>
+  
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     <section class="connect">
-                <div class="filter-container">
-                    <!-- Price Filters -->
-                    <div class="filter-section">
-                        <label class="filter-label">Price</label>
-                        <div class="filter-row">
-                            <select id="priceMin">
-                                <option value="">Min</option>
-                                <option value="0">R0</option>
-                                <option value="50000">R50 000</option>
-                                <option value="75000">R75 000</option>
-                                <option value="100000">R100 000</option>
-                                <option value="125000">R125 000</option>
-                                <option value="150000">R150 000</option>
-                                <option value="200000">R200 000</option>
-                                <option value="250000">R250 000</option>
-                                <option value="300000">R300 000</option>
-                                <option value="400000">R400 000</option>
-                                <option value="500000">R500 000</option>
-                            </select>
-                            <select id="priceMax">
-                                <option value="">Max</option>
-                                <option value="50000">R50 000</option>
-                                <option value="75000">R75 000</option>
-                                <option value="100000">R100 000</option>
-                                <option value="125000">R125 000</option>
-                                <option value="150000">R150 000</option>
-                                <option value="200000">R200 000</option>
-                                <option value="250000">R250 000</option>
-                                <option value="300000">R300 000</option>
-                                <option value="400000">R400 000</option>
-                                <option value="500000">R500 000</option>
-                                <option value="750000">R750 000</option>
-                                <option value="1000000">R1 000 000</option>
-                            </select>
-                        </div>
-                    </div>
-            
-                    <!-- Mileage Filters -->
-                    <div class="filter-section">
-                        <label class="filter-label">Mileage</label>
-                        <div class="filter-row">
-                            <select id="mileageMin">
-                                <option value="">Min</option>
-                                <option value="0">0 km</option>
-                                <option value="10000">10 000 km</option>
-                                <option value="25000">25 000 km</option>
-                                <option value="50000">50 000 km</option>
-                                <option value="75000">75 000 km</option>
-                                <option value="100000">100 000 km</option>
-                                <option value="150000">150 000 km</option>
-                                <option value="200000">200 000 km</option>
-                            </select>
-                            <select id="mileageMax">
-                                <option value="">Max</option>
-                                <option value="10000">10 000 km</option>
-                                <option value="25000">25 000 km</option>
-                                <option value="50000">50 000 km</option>
-                                <option value="75000">75 000 km</option>
-                                <option value="100000">100 000 km</option>
-                                <option value="150000">150 000 km</option>
-                                <option value="200000">200 000 km</option>
-                                <option value="250000">250 000 km</option>
-                                <option value="300000">300 000 km</option>
-                            </select>
-                        </div>
-                    </div>
-            
-                    <!-- More Filters Toggle -->
-                    <div class="more-filters-section">
-                        <button class="more-filters-toggle" onclick="toggleMoreFilters()">
-                            <span>More Filters</span>
-                            <svg class="chevron" width="16" height="16" viewBox="0 0 16 16">
-                                <path fill="currentColor" d="M8 11L3 6h10z"/>
-                            </svg>
-                        </button>
-                        
-                        <div class="more-filters-content" id="moreFiltersContent">
-                            <!-- Year Filters -->
-                            <div class="filter-section">
-                                <label class="filter-label">Year</label>
-                                <div class="filter-row">
-                                    <select id="yearMin">
-                                        <option value="">Min</option>
-                                        <option value="2000">2000</option>
-                                        <option value="2005">2005</option>
-                                        <option value="2010">2010</option>
-                                        <option value="2015">2015</option>
-                                        <option value="2016">2016</option>
-                                        <option value="2017">2017</option>
-                                        <option value="2018">2018</option>
-                                        <option value="2019">2019</option>
-                                        <option value="2020">2020</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2022">2022</option>
-                                        <option value="2023">2023</option>
-                                        <option value="2024">2024</option>
-                                        <option value="2025">2025</option>
-                                    </select>
-                                    <select id="yearMax">
-                                        <option value="">Max</option>
-                                        <option value="2015">2015</option>
-                                        <option value="2016">2016</option>
-                                        <option value="2017">2017</option>
-                                        <option value="2018">2018</option>
-                                        <option value="2019">2019</option>
-                                        <option value="2020">2020</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2022">2022</option>
-                                        <option value="2023">2023</option>
-                                        <option value="2024">2024</option>
-                                        <option value="2025">2025</option>
-                                        <option value="2026">2026</option>
-                                    </select>
-                                </div>
-                            </div>
-            
-                            <!-- Transmission Filter -->
-                            <div class="filter-section">
-                                <label class="filter-label">Transmission</label>
-                                <select id="transmission" class="full-width-select">
-                                    <option value="">Any</option>
-                                    <option value="manual">Manual</option>
-                                    <option value="automatic">Automatic</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <!-- Apply Filters Button -->
-                    <button class="apply-button" onclick="applyFilters()"><i class="fa-solid fa-filter"></i> Apply Filters </button>
-                </div>
-            
-                <script>
-                    function toggleMoreFilters() {
-                        const content = document.getElementById('moreFiltersContent');
-                        const toggle = document.querySelector('.more-filters-toggle');
-                        
-                        if (content.classList.contains('show')) {
-                            content.classList.remove('show');
-                            toggle.classList.remove('active');
-                        } else {
-                            content.classList.add('show');
-                            toggle.classList.add('active');
-                        }
-                    }
-            
-                    function applyFilters() {
-                        const priceMin = document.getElementById('priceMin').value;
-                        const priceMax = document.getElementById('priceMax').value;
-                        const mileageMin = document.getElementById('mileageMin').value;
-                        const mileageMax = document.getElementById('mileageMax').value;
-                        const yearMin = document.getElementById('yearMin').value;
-                        const yearMax = document.getElementById('yearMax').value;
-                        const transmission = document.getElementById('transmission').value;
-            
-                        console.log('Filters Applied:');
-                        console.log('Price:', priceMin, '-', priceMax);
-                        console.log('Mileage:', mileageMin, '-', mileageMax);
-                        console.log('Year:', yearMin, '-', yearMax);
-                        console.log('Transmission:', transmission);
-            
-                        // You can add your filter logic here
-                        let message = `Filters Applied!\nPrice: ${priceMin || 'Any'} - ${priceMax || 'Any'}\nMileage: ${mileageMin || 'Any'} - ${mileageMax || 'Any'}`;
-                        
-                        if (yearMin || yearMax) {
-                            message += `\nYear: ${yearMin || 'Any'} - ${yearMax || 'Any'}`;
-                        }
-                        
-                        if (transmission) {
-                            message += `\nTransmission: ${transmission.charAt(0).toUpperCase() + transmission.slice(1)}`;
-                        }
-                        
-                        alert(message);
-                    }
-            
-                    // Optional: Apply filters when dropdowns change
-                    document.querySelectorAll('select').forEach(select => {
-                        select.addEventListener('change', function() {
-                            console.log(this.id + ' changed to:', this.value);
-                        });
-                    });
-                </script>
-   </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-                <div class="pagination">
               
-                
-                <div class="container"  id="container">
-                    <div class="grid">
-                        <!-- Card 1 -->
-                        <div class="card">
-                            <div class="card-image" style="background-image: url('cars/maincar.jpeg')">
-                       
-                                
-                                <div class="card-banner">
-                                    <span>Clear. Simple.</span> <strong>Vehicle Purchase</strong>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <h3 class="card-title">Renault Clio 4 1.2 Authentique 2014</h3>
-                                <div>
-                                    <span class="card-price">R59,000</span>
-                                    <span class="card-mileage">| 195,012 KM</span>
-                                </div>
-                                <div class="card-location">
-                                 
-                                    <span>Fair Condition</span>
-                                </div>
-                                <div class="card-stock">Available</div>
-                            </div>
-                            <button class="card-button"> <a href="vehicle-details.html">
-                                
-                                View Vehicle <i class="fas fa-search"></i></a>
-                            </button>
-                        </div>
-            
-                        <!-- Card 2 -->
-                        <div class="card">
-                            <div class="card-image" style="background-image: url('cars/toyota.jpeg');">
-                         
-                                
-                                <div class="card-banner">
-                                    <span>Clear. Simple.</span> <strong>Vehicle Purchase</strong>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <h3 class="card-title">Toyota Corolla 1.6 Professional 2010</h3>
-                                <div>
-                                    <span class="card-price">R69,00</span>
-                                    <span class="card-mileage">| 562,674 KM</span>
-                                </div>
-                                <div class="card-location">
-                                    
-                                   
-                                    <span>Good Condition</span>
-                                </div>
-                                <div class="card-stock">Available</div>
-                            </div>
-                            <button class="card-button">
-                                
-                                View Vehicle<i class="fas fa-search"></i>
-                            </button>
-                        </div>
-            
 
-                        <div class="card">
-                            <div class="card-image" style="background-image: url('cars/opel.jpeg')">
-                      
-                                
-                                <div class="card-banner">
-                                    <span>Clear. Simple.</span> <strong>Vehicle Purchase</strong>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <h3 class="card-title">Opel Corsa 1.0T Ecoflex Enjoy 2016</h3>
-                                <div>
-                                    <span class="card-price">R69,000</span>
-                                    <span class="card-mileage">| 172,336 KM</span>
-                                </div>
-                                <div class="card-location">
-                           
-                                    <span>Fair Condition</span>
-                                </div>
-                                <div class="card-stock">Available</div>
-                            </div>
-                            <button class="card-button">
-                                
-                                View Vehicle<i class="fas fa-search"></i>
-                            </button>
-                        </div>
 
-                        <div class="card">
-                            <div class="card-image" style="background-image: url('cars/polo.jpeg')">
-                      
-                                
-                                <div class="card-banner">
-                                    <span>Clear. Simple.</span> <strong>Vehicle Purchase</strong>
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <h3 class="card-title">Volkswagen Polo Vivo GP 1.4 Trendline 2016</h3>
-                                <div>
-                                    <span class="card-price">R89,000</span>
-                                    <span class="card-mileage">| 246,555 KM</span>
-                                </div>
-                                <div class="card-location">
-                           
-                                    <span>Good Condition</span>
-                                </div>
-                                <div class="card-stock">Available</div>
-                            </div>
-                            <button class="card-button">
-                                
-                                View Vehicle<i class="fas fa-search"></i>
-                            </button>
-                        </div>
-            
-                    </div>
+
+ 
+
+
+      <div id="pagination-numbers"></div>
+
+
+
+      
+  
+      <!-- PocketBase SDK -->
+      <script src="https://cdn.jsdelivr.net/npm/pocketbase@0.21.3/dist/pocketbase.umd.js"></script>
+
+      
+      <script>
+
+const pb = new PocketBase('http://127.0.0.1:8090');
+let allVehicles = [];
+let currentPage = 1;
+const itemsPerPage = 5;
+
+function toggleMoreFilters() {
+    const content = document.getElementById('moreFiltersContent');
+    const toggle = document.querySelector('.more-filters-toggle');
+    content.classList.toggle('show');
+    toggle.classList.toggle('active');
+}
+
+function buildFilter() {
+    const parts = [];
+    const priceMin = document.getElementById('priceMin').value;
+    const priceMax = document.getElementById('priceMax').value;
+    const mileageMin = document.getElementById('mileageMin').value;
+    const mileageMax = document.getElementById('mileageMax').value;
+    const yearMin = document.getElementById('yearMin').value;
+    const yearMax = document.getElementById('yearMax').value;
+    const transmission = document.getElementById('transmission').value;
+    const search = document.getElementById('searchInput').value.trim();
+
+    if (priceMin) parts.push(`price >= ${priceMin}`);
+    if (priceMax) parts.push(`price <= ${priceMax}`);
+    if (mileageMin) parts.push(`mileage >= ${mileageMin}`);
+    if (mileageMax) parts.push(`mileage <= ${mileageMax}`);
+    if (yearMin) parts.push(`year >= ${yearMin}`);
+    if (yearMax) parts.push(`year <= ${yearMax}`);
+    if (transmission) parts.push(`transmission = "${transmission}"`);
+
+    if (search) {
+        const stopWords = ['car', 'cars', 'for', 'sale', 'the', 'a', 'an'];
+        const words = search.toLowerCase().split(/\s+/)
+            .map(w => w.replace(/[^a-z0-9]/g, ''))
+            .filter(w => w && !stopWords.includes(w));
+
+        const searchParts = words.map(word => {
+            const cleanWord = word.endsWith('s') && word.length > 3 ? word.slice(0, -1) : word;
+            return `(make ~ "${cleanWord}" || model ~ "${cleanWord}" || body_type ~ "${cleanWord}" || fuel_type ~ "${cleanWord}")`;
+        });
+
+        if (searchParts.length > 0) {
+            parts.push(`(${searchParts.join(' && ')})`);
+        }
+    }
+
+    return parts.join(' && ');
+}
+
+function renderCard(vehicle) {
+    const imageUrl = vehicle.images && vehicle.images.length
+        ? pb.files.getUrl(vehicle, vehicle.images[0])
+        : 'cars/maincar.jpeg';
+
+    return `
+        <a class="card" href="vehicle-details.html?id=${vehicle.id}">
+            <div class="card-image" style="background-image: url('${imageUrl}')">
+                <div class="card-banner">
+                    <span>Clear. Simple.</span> <strong>Vehicle Purchase</strong>
                 </div>
             </div>
+            <div class="card-content">
+                <h3 class="card-title">${vehicle.make} ${vehicle.model} ${vehicle.year}</h3>
+                <div>
+                    <span class="card-price">R${Number(vehicle.price).toLocaleString('en-US')}</span>
+                    <span class="card-mileage">| ${Number(vehicle.mileage).toLocaleString('en-US')} KM</span>
+                </div>
+                <div class="card-specs">
+                    <span class="card-body-type">${vehicle.body_type || ''}</span>
+                    <span class="card-transmission">${vehicle.transmission || ''}</span>
+                    <span class="card-fuel">${vehicle.fuel_type || ''}</span>
+                </div>
+            </div>
+            <div class="card-button">
+                View Vehicle <i class="fas fa-search"></i>
+            </div>
+        </a>
+    `;
+}
 
-            
-    <div id="pagination-numbers"></div>
+function renderSkeletons() {
+    let html = '';
+    for (let i = 0; i < 5; i++) {
+        html += `
+            <div class="skeleton-card">
+                <div class="skeleton-image skeleton-bg"></div>
+                <div class="skeleton-content">
+                    <div class="skeleton-title skeleton-bg"></div>
+                    <div class="skeleton-row skeleton-bg"></div>
+                    <div class="skeleton-specs skeleton-bg"></div>
+                </div>
+                <div class="skeleton-button skeleton-bg"></div>
+            </div>
+        `;
+    }
+    return html;
+}
 
-            
+function renderNoResults(grid) {
+    grid.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 40px 20px;">
+            <p style="font-size: 1.1rem; color: #555; margin-bottom: 20px;">No vehicles match your search.</p>
+            <button onclick="resetAllFilters()" style="
+                background: transparent;
+                border: 2px solid #28a745;
+                color: #28a745;
+                padding: 10px 24px;
+                font-weight: 700;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: all 0.2s ease;
+            ">
+                <i class="fa-solid fa-arrow-left" style="margin-right: 8px;"></i> Back / Reset Filters
+            </button>
+        </div>
+    `;
+    document.getElementById('pagination-numbers').innerHTML = '';
+}
 
+function resetAllFilters() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('priceMin').value = '';
+    document.getElementById('priceMax').value = '';
+    document.getElementById('mileageMin').value = '';
+    document.getElementById('mileageMax').value = '';
+    document.getElementById('yearMin').value = '';
+    document.getElementById('yearMax').value = '';
+    document.getElementById('transmission').value = '';
+    currentPage = 1;
+    loadVehicles();
+}
 
-           
-            
-        
+async function loadVehicles() {
+    const grid = document.getElementById('vehicleGrid');
+    grid.innerHTML = renderSkeletons();
 
+    try {
+        const filter = buildFilter();
+        allVehicles = await pb.collection('vehicles').getFullList({
+            sort: '-created',
+            filter: filter || ''
+        });
 
+        currentPage = 1;
+        displayPage();
+    } catch (err) {
+        console.error('Failed to load vehicles:', err);
+        grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #d9534f;">Could not load vehicles right now.</p>';
+    }
+}
+
+function displayPage() {
+    const grid = document.getElementById('vehicleGrid');
+    const paginationContainer = document.getElementById('pagination-numbers');
+
+    if (allVehicles.length === 0) {
+        renderNoResults(grid);
+        return;
+    }
+
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const pageVehicles = allVehicles.slice(startIndex, endIndex);
+
+    grid.innerHTML = pageVehicles.map(renderCard).join('');
+    renderPaginationControls();
+    scrollToTop();
+}
+
+function renderPaginationControls() {
+    const totalPages = Math.ceil(allVehicles.length / itemsPerPage);
+    const container = document.getElementById('pagination-numbers');
+    
+    if (totalPages <= 1) {
+        container.innerHTML = '';
+        return;
+    }
+
+    let html = `
+        <button class="page-btn text-btn" ${currentPage === 1 ? 'disabled' : ''} onclick="changePage(${currentPage - 1})">
+            <i class="fa-solid fa-arrow-left"></i> Back
+        </button>
+    `;
+
+    for (let i = 1; i <= totalPages; i++) {
+        html += `
+            <button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="changePage(${i})">
+                ${i}
+            </button>
+        `;
+    }
+
+    html += `
+        <button class="page-btn text-btn" ${currentPage === totalPages ? 'disabled' : ''} onclick="changePage(${currentPage + 1})">
+            Next <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    `;
+
+    container.innerHTML = html;
+}
+
+function changePage(targetPage) {
+    currentPage = targetPage;
+    displayPage();
+}
+
+function applyFilters() {
+    loadVehicles();
+}
+
+document.getElementById('searchInput').addEventListener('keyup', (e) => {
+    if (e.key === 'Enter') loadVehicles();
+});
+
+document.querySelector('.search-btn').addEventListener('click', () => {
+    loadVehicles();
+});
+
+loadVehicles();
+
+function scrollToSearch() {
+    const searchSection = document.querySelector('.search-algorithm');
+    if (searchSection) {
+        searchSection.scrollIntoView({ behavior: 'smooth' });
+        const input = document.getElementById('searchInput');
+        if (input) input.focus();
+    }
+}
+
+function scrollToTop() {
+    const firstCard = document.querySelector('.card-image') || document.querySelector('.search-algorithm');
+    if (firstCard) {
+        firstCard.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+    </script>
 
 
 
           
-
+<div class="floating-widgets">
+    <!-- Quick Jump to Search Bar (Green) -->
+    <button class="float-btn" onclick="scrollToSearch()" aria-label="Scroll to Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    
+    <!-- Quick Jump to Top (White Background) -->
+    <button class="float-btn scroll-top-btn" onclick="scrollToTop()" aria-label="Scroll to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+</div>
               
 
 

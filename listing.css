@@ -427,6 +427,32 @@ select:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .container {
     max-width: 1250px;
     margin: 0 auto;
@@ -441,12 +467,15 @@ select:hover {
 
 .card {
     background: white;
-    border-radius: 1.5px;
+    border-radius: 2px;
     overflow: hidden;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.189);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .card:hover {
@@ -463,18 +492,12 @@ select:hover {
     padding-bottom: 45px;
 }
 
-
-.card-logo svg {
-    width: 35px;
-    height: 35px;
-}
-
 .card-banner {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(114deg, #189b8a 0%,  #0c5e52 100%);
+    background: linear-gradient(114deg, #189b8a 0%, #0c5e52 100%);
     color: white;
     padding: 6px 10px;
     font-size: 11px;
@@ -503,9 +526,9 @@ select:hover {
 }
 
 .card-price {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
-    color:#193b52;
+    color: #1b786c;
     margin-bottom: 8px;
 }
 
@@ -516,34 +539,47 @@ select:hover {
     margin-left: 8px;
 }
 
-.card-location {
+.card-specs {
+    padding-top:1rem;
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin: 12px 0;
-    font-size: 14px;
-    color: #666;
+    flex-wrap: wrap;
+    gap: 1px;
+    font-weight: 800;
+    color: #112532;
+    font-size: 0.85rem;
 }
 
-.location-icon {
-    width: 20px;
-    height: 20px;
-    fill: #888;
+/* Hide empty spec spans automatically so they don't break layout */
+.card-specs span:empty {
+    display: none;
 }
 
-.card-stock {
-    padding: 0.30rem 0.9rem;
-font-size: 0.80rem;
-font-weight: 400;
-text-transform: uppercase;
-letter-spacing: 1px;
-color: #ffffff;
-background: linear-gradient(114deg, #189b8a 0%,  #0c5e52 100%); 
-border: 3px solid #ffffff;
-border-radius: 50px;
-width: fit-content;
-    margin-top: 8px;
+/* Automatically add a gray separator dot before any spec that follows another visible spec */
+.card-specs span:not(:empty) ~ span:not(:empty)::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #416151;
+    margin: 0 12px;
+    vertical-align: middle;
 }
+.card-transmission {
+    font-weight: 700;
+    color: #112532;
+}
+
+.card-fuel, .card-body-type {
+    font-weight: 700;
+    color: #112532;
+    position: relative;
+    padding-left: 12px;
+}
+
+
+
 
 
 
@@ -551,13 +587,11 @@ width: fit-content;
 .card-button {
     width: 100%;
     padding: 10px 20px;
-    background: linear-gradient(114deg, #189b8a 0%,  #0c5e52 100%);
+    background: linear-gradient(114deg, #189b8a 0%, #0c5e52 100%);
     color: white;
     border: none;
     font-size: 14px;
     font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -565,14 +599,8 @@ width: fit-content;
     margin-top: auto;
 }
 
-.card-button:hover {
-    background: linear-gradient(115deg, #295674 0%, #0e5584 100%); 
-}
-
-.card-button svg {
-    width: 20px;
-    height: 20px;
-    fill: white;
+.card:hover .card-button {
+    background: linear-gradient(115deg, #295674 0%, #0e5584 100%);
 }
 
 @media (max-width: 1200px) {
@@ -608,46 +636,42 @@ width: fit-content;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #pagination-numbers {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     margin: 40px 0;
 }
 
 .page-btn {
     width: 45px;
     height: 45px;
-    border-radius: 50%;
+    border-radius: 10%;
     border: 1px solid #e0e0e0;
     background: white;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: 600;
     transition: all 0.3s ease;
 }
 
+.page-btn.text-btn {
+    width: auto;
+    padding: 0 15px;
+    
+    font-size: 12px;
+    gap: 2px;
+    color:#136c5a ;
+}
+
 .page-btn.active {
-    background: #132a3a;
+    background: #136c5a ;
     color: #ffffff;
-    border-color: #181717;
+    border-color:#539c8d ;
 }
 
 .page-btn:disabled {
@@ -657,4 +681,131 @@ width: fit-content;
 
 .page-btn:hover:not(.active):not(:disabled) {
     border-color: #0e0e0e;
+    background: #f8f9fa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.skeleton-bg {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite;
+    border-radius: 4px;
+}
+
+.skeleton-card {
+    background: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.skeleton-image {
+    height: 180px;
+    width: 100%;
+}
+
+.skeleton-content {
+    padding: 16px;
+}
+
+.skeleton-title {
+    height: 22px;
+    width: 85%;
+    margin-bottom: 12px;
+}
+
+.skeleton-row {
+    height: 16px;
+    width: 50%;
+    margin-bottom: 12px;
+}
+
+.skeleton-specs {
+    height: 14px;
+    width: 70%;
+}
+
+.skeleton-button {
+    height: 40px;
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.floating-widgets {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 9999;
+}
+
+.float-btn {
+    width: 48px;
+    height: 48px;
+    background-color: #247855;
+    color: #ffffff;
+    border: 2.5px solid #b1cfc3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.float-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* White background variant for scroll-to-top */
+.scroll-top-btn {
+    background-color: #ffffff;
+    color: #333333;
+    border: 2.5px solid #7aa996;
+}
+
+.scroll-top-btn:hover {
+    background-color: #f8f9fa;
+    color: #28a745;
+    transform: translateY(-2px);
 }
